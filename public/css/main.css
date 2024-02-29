@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/* 
+    display:grid block , grid inline-block 
+    scss 
+    display:grid   columns-grid : px % fr     
+    px % fr auto repeat minmax(300px,auto)  
+    rows : 100px  
+    fr auto % 
+*/
+@media screen and (min-width:0){
+    
+    .container{
+        width: 100%;
+        display: grid;
+        grid-template-areas: 
+           "header" 
+           "content"
+           "aside"
+           "box-1"
+           "box-2"
+           "box-3"
+           "slider"
+           "footer"
+        ;   
+        .header{
+            height: 200px;
+            background-color: #2b2b2b;
+            grid-area:header;
+        }
+        .content{
+            background-color: darkcyan;
+            grid-area: content;
+            height: 200px;
+            transition: 300ms;
+            &:hover{
+                background-color: darkorange;
+            }
+        }
+        .aside{
+            height: 200px;
+            background-color: darkslateblue;
+            grid-area: aside;
+        }
+        .box-1{
+                height: 200px;
+                background-color: darkolivegreen;
+                grid-area: box-1;
+        }
+        .box-2{
+                height: 200px;
+                background-color: darkslategrey;
+                grid-area: box-2;
+        }
+        .box-3{
+                height: 200px;
+                background-color: darkgrey;
+                grid-area: box-3;
+        }
+        .slider{
+            height: 200px;
+            background-color: darkslateblue;
+            grid-area: slider;
+        }
+        .footer{
+            height: 100px;
+            background-color: darkseagreen;
+            grid-area: footer;
+            width: 100%;
+        }
+        
+    }
+}
+@media screen and (min-width:1000px){
+
+    .container{
+        width: 100%;
+        display: grid;
+        grid-template-areas: 
+           "header header header" 
+           "content content aside"
+           "box-1 box-2 box-3"
+           "slider slider slider"
+           "footer footer footer"
+        ;
+        gap: 5px;
+        .header{
+            height: 200px;
+            background-color: #2b2b2b;
+            grid-area:header;
+            width: 60%;
+            justify-self: center;
+        }
+        .content{
+            background-color: darkcyan;
+            grid-area: content;
+            height: 200px;
+            width: 50%;
+            justify-self:left;
+            transition: 300ms;
+            &:hover{
+                background-color: darkorange;
+            }
+        }
+        .aside{
+            height: 200px;
+            background-color: darkslateblue;
+            grid-area: aside;
+        }
+        .box-1{
+                height: 200px;
+                background-color: darkolivegreen;
+                grid-area: box-1;
+                width: 50%;
+                justify-self: right;
+        }
+        .box-2{
+                height: 200px;
+                background-color: darkslategrey;
+                grid-area: box-2;
+                width: 50%;
+                justify-self: center;
+        }
+        .box-3{
+                height: 200px;
+                background-color: darkgrey;
+                grid-area: box-3;
+                width: 50%;
+                justify-self: left;
+        }
+        .slider{
+            height: 200px;
+            background-color: darkslateblue;
+            grid-area: slider;
+            width: 50%;
+            justify-self: center;
+        }
+        .footer{
+            height: 100px;
+            background-color: darkseagreen;
+            grid-area: footer;
+            width: 100%;
+        }
+        
+    }
+}
